@@ -8,8 +8,8 @@ using Persistence;
 namespace Persistence.Migrations.SQLiteMigrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220127083552_ProductTypeAndBandMigrations")]
-    partial class ProductTypeAndBandMigrations
+    [Migration("20220127102130_SeedsMigrations")]
+    partial class SeedsMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -56,6 +56,9 @@ namespace Persistence.Migrations.SQLiteMigrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("ProductBrands");
@@ -66,6 +69,9 @@ namespace Persistence.Migrations.SQLiteMigrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

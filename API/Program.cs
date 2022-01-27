@@ -22,6 +22,7 @@ namespace API
                 {
                     var context = services.GetRequiredService<DataContext>();
                     await context.Database.MigrateAsync();
+                    await DataContextSeed.SeedAsync(context, loggerFactory);
                 }
                 catch (Exception ex) 
                 {
@@ -29,6 +30,7 @@ namespace API
                     logger.LogError(ex, "An error occured during migration");
                 }
             }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
