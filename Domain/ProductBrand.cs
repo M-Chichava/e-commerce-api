@@ -2,7 +2,7 @@
 
 namespace Domain
 {
-    public class ProductBrand
+    public class ProductBrand : BaseEntitie
     {
     }
 }
