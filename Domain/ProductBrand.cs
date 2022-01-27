@@ -2,7 +2,7 @@
 
 namespace Domain
 {
-    public class ProductBrand : BaseEntitie
+    public class ProductBrand : BaseEntity
     {
         public string Name { get; set; }
     }
