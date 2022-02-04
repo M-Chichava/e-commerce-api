@@ -8,5 +8,7 @@ namespace Application.Interfaces
     {
         Expression<Func<T, bool>> Criteria {get;} 
         List<Expression<Func<T, object>>> Includes {get;}
+        Expression<Func<T, Object>> OrderBy {get;}
+        Expression<Func<T, Object>> OrderByDescending {get;}
     }
 }
